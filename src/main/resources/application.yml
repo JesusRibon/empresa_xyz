@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: users
+  profiles:
+    active: local
+
+---
+spring:
+  profile: local
+  datasource:
+    url: jdbc:mysql://localhost:3306/empresa_jrb
+    username: root
+    password: 1234
+    test-on-borrow: true
+    validation-query: SELECT 1 FROM dual
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      format-sql: true
+      ddl-auto: update
