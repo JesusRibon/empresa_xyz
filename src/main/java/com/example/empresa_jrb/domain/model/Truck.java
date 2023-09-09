@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 public class Truck {
 
     private Long id;
-    private String brand;
     private String plate;
     private String status;
     private String model;
+    private String brand;
 }
