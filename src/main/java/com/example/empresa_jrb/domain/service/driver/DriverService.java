@@ -9,4 +9,10 @@ public interface DriverService {
     Driver saveDriver(Driver driver);
 
     List<Driver> getAll();
+
+    Driver driverById(String numberId);
+
+    void updateDriver(Driver driver , String id);
+
+    void deleteDriver(String id);
 }

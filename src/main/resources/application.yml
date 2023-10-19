@@ -5,6 +5,7 @@ spring:
     active: local
 
 ---
+
 spring:
   profile: local
   datasource:
@@ -19,3 +20,13 @@ spring:
     hibernate:
       format-sql: true
       ddl-auto: update
+rabbitmq:
+  host: localhost
+  virtualhost: /
+  port: 15672
+  username: guest
+  password: guest
+
+
+
+

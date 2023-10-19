@@ -22,4 +22,16 @@ public class DriverController {
     public ResponseEntity<List<Driver>> getAll(){
         return ResponseEntity.ok(driverService.getAll());
     }
+    @GetMapping("/search/{numberId}")
+    public ResponseEntity<Driver> driverById(@PathVariable String numberId){
+        return ResponseEntity.ok(driverService.driverById(numberId));
+    }
+    @PutMapping("/put/{id}")
+    public void updateDriver(@PathVariable String id , @RequestBody Driver driver){
+        driverService.updateDriver(driver , id);
+    }
+    @DeleteMapping("/delete/{id}")
+    public void delelteDriver(@PathVariable String id){
+        driverService.deleteDriver(id);
+    }
 }
